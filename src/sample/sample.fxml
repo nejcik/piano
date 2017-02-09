@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.Double?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="350" minWidth="600" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+            <Menu mnemonicParsing="false" text="Help">
+                <items>
+                    <MenuItem fx:id="about" mnemonicParsing="false" text="About">
+
+                    </MenuItem>
+                  <MenuItem fx:id="legenda" mnemonicParsing="false" text="Legenda" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="myPane" focusTraversable="true" onKeyPressed="#handleKeyPressed" onKeyReleased="#handleKeyReleased" prefHeight="373.0" prefWidth="600.0">
+         <children>
+            <VBox layoutX="112.0" layoutY="98.0" prefHeight="375.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.5" AnchorPane.leftAnchor="0.5" AnchorPane.rightAnchor="0.5" AnchorPane.topAnchor="0.5">
+               <children>
+                  <HBox fx:id="sheet" prefHeight="130.0" prefWidth="600.0">
+                     <children>
+
+                        <Ellipse fx:id="ball" radiusX="10.0" radiusY="7.0" stroke="BLACK" strokeType="INSIDE">
+                           <HBox.margin>
+                              <Insets left="55.0" />
+                           </HBox.margin>
+                        </Ellipse>
+                     </children></HBox>
+                  <VBox fx:id="pianoPlace" prefHeight="20.0">
+                     <children>
+                        <Rectangle fx:id="pianoTop" arcHeight="5.0" arcWidth="5.0" height="25.0" stroke="BLACK" strokeType="INSIDE" width="549.0">
+                           <VBox.margin>
+                              <Insets left="23.0" right="20.0" top="10" />
+                           </VBox.margin>
+                        </Rectangle>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="keyPlace" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Polygon id="keyC" fx:id="keyC" fill="WHITE" focusTraversable="true" stroke="BLACK" strokeType="INSIDE">
+                          <points>
+                            <Double fx:value="0.0" />
+                            <Double fx:value="500.0" />
+                            <Double fx:value="27.0" />
+                            <Double fx:value="500.0" />
+                            <Double fx:value="27.0" />
+                            <Double fx:value="580.0" />
+                            <Double fx:value="40.0" />
+                            <Double fx:value="580.0" />
+                            <Double fx:value="40.0" />
+                            <Double fx:value="640.0" />
+                            <Double fx:value="0.0" />
+                            <Double fx:value="640.0" />
+                          </points>
+                           <HBox.margin>
+                              <Insets left="24.0" />
+                           </HBox.margin>
+                        </Polygon>
+                        <Rectangle fx:id="blackC" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                               <fill>
+                                   <LinearGradient endX="1.0" startX="1.0" startY="1.0">
+                                       <stops>
+                                           <Stop color="BLACK" />
+                                           <Stop color="WHITE" offset="0.5" />
+                                       </stops>
+                                   </LinearGradient>
+                               </fill>
+
+                        </Rectangle>
+                        <Polygon fx:id="keyD" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackD" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyE" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Polygon fx:id="keyF" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="0.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                           </points>
+                           <HBox.margin>
+                              <Insets left="-1.0" />
+                           </HBox.margin>
+                        </Polygon>
+                        <Rectangle fx:id="blackF" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyG" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackG" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyA" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackA" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyH" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Polygon fx:id="keyC1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="0.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                           </points>
+                           <HBox.margin>
+                              <Insets left="-1.0" />
+                           </HBox.margin>
+                        </Polygon>
+                        <Rectangle fx:id="blackC1" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyD1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackD1" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyE1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Polygon fx:id="keyF1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="0.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                           </points>
+                           <HBox.margin>
+                              <Insets left="-1.0" />
+                           </HBox.margin>
+                        </Polygon>
+                        <Rectangle fx:id="blackF1" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyG1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackG1" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyA1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="27.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                        <Rectangle fx:id="blackA1" arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" width="24.0">
+                           <HBox.margin>
+                              <Insets left="-13.0" right="-12.0" />
+                           </HBox.margin>
+                        </Rectangle>
+                        <Polygon fx:id="keyH1" fill="WHITE" stroke="BLACK" strokeType="INSIDE">
+                           <points>
+                              <Double fx:value="12.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="500.0" />
+                              <Double fx:value="40.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="640.0" />
+                              <Double fx:value="0.0" />
+                              <Double fx:value="580.0" />
+                              <Double fx:value="12.0" />
+                              <Double fx:value="580.0" />
+                           </points>
+                        </Polygon>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+         <VBox.margin>
+            <Insets right="1.0" top="2.0" />
+
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>

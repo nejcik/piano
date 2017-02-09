@@ -1,0 +1,5 @@
+<root>
+    <item name='com.sun.media.jfxmedia.AudioClip'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
